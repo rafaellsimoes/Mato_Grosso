@@ -19,51 +19,193 @@
     
     <!-- Estilos CSS personalizados -->
     <style>
+        /* Estilo Geral da Página*/
+        h1 {
+            color: #0c053a;
+            font-family: 'Roboto', sans-serif;
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #02083b;
+            font-family: 'Times', sans-serif;
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        /* Estilo da Main*/
+
+        
         /* Estilo geral do corpo da página */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;  /* Define a fonte padrão */
-            margin: 0;                                          /* Remove margens padrão */
-            padding: 0;                                         /* Remove paddings padrão */
-            background: linear-gradient(135deg, #0d7226 0%, #1e8c3a 25%, #2da34e 50%, #4abf6a 75%, #6adc88 100%); /* Gradiente de fundo */
-            color: #333;                                        /* Cor padrão do texto */
-            line-height: 1.7;                                   /* Espaçamento entre linhas */
-            min-height: 100vh;                                  /* Altura mínima da viewport */
-            display: flex;                                      /* Ativa flexbox */
-            flex-direction: column;                             /* Organiza itens em coluna */
+            font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0d7226 0%, #1e8c3a 25%, #2da34e 50%, #4abf6a 75%, #6adc88 100%);
+            color: #333;
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Estilo do cabeçalho */
         header {
-            background:linear-gradient(135deg, #012677 0%, #009739 40%, #f7d417 80%, #ffffff 100%); /* Gradiente do cabeçalho */
-            padding: 2rem 1rem;                                /* Espaçamento interno */
-            text-align: center;                                /* Centraliza o texto */
-            border-bottom: 3px solid #0ff707;                  /* Borda inferior decorativa */
-            color: #ffffff;                                    /* Cor do texto */
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);         /* Sombra no texto */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);          /* Sombra na caixa */
+            background: linear-gradient(135deg, #012677 0%, #009739 40%, #f7d417 80%, #ffffff 100%);
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 3px solid #0ff707;
+            color: #ffffff;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         /* Estilo do rodapé */
         footer {
-            background:linear-gradient(135deg, #00A1E4 0%, #FFFFFF 50%, #00A859 100%);                       /* Cor de fundo */
-            color: black;                                      /* Cor do texto */
-            text-align: center;                                /* Centraliza o texto */
-            padding: 1rem;                                     /* Espaçamento interno */
-            margin-top: auto;                                  /* Mantém o rodapé no final */
+            background: linear-gradient(135deg, #00A1E4 0%, #FFFFFF 50%, #00A859 100%);
+            color: black;
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto;
+        }
+        
+        /*Container para o Texto*/
+        .container-texto {
+            max-width: 800px;
+            max-height: 300px;
+            overflow: scroll;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #8cb009;
+            border-radius: 10px;
+            background: linear-gradient(to right, #007BFF, #3399cc, #33cc99, #28a745);
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /*Container para Imagem*/
+
+         .container-imagem {
+                max-width: 400px;
+                margin: 20px auto;
+                text-align: center;
+                vertical-align: top;
+                font-family: Arial, sans-serif;
+        }
+
+        .container-imagem img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+        }
+
+        .legenda {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /*Estilo de botões*/
+        .btn-mt {
+            border: 2px solid #30b31c;
+            font-weight: bold;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        .btn-mt:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(6, 64, 199, 0.2);
+        }
+        
+        /* Container para os botões no header */
+        .header-buttons {
+            margin-top: 1.5rem;
+            padding: 1rem;
         }
     </style>
 </head>
 
 <body>
-    <!-- Cabeçalho da página -->
+    <!-- Cabeçalho da página com botões -->
     <header>
         <h1>Nosso Tema é Mato Grosso</h1>
+        <p class="lead">Potência do Brasil e do Centro-Oeste</p>
+        
+        <!-- Botões no header -->
+        <div class="header-buttons d-flex flex-wrap justify-content-center">
+            
+            <button type="button" class="btn btn-primary btn-mt">
+                <i class="bibi bi-graph-up"></i> Economia
+            </button>
+            
+            <button type="button" class="btn btn-success btn-mt">
+                <i class="bi bi-backpack"></i> Educação
+            </button>
+            
+            <button type="button" class="btn btn-warning btn-mt">
+                <i class="bi bi-cow"></i> Agropecuária
+            </button>
+
+            <button type="button" class="btn btn-dark btn-mt">
+                <i class="bi bi-pin-map"></i> Cartografia
+            </button>
+
+            <button type="button" class="btn btn-light btn-mt">
+                <i class="bi bi-hospital"></i> Saúde
+            </button>
+        </div>
     </header>
 
-    <!-- Conteúdo principal (a ser adicionado posteriormente) -->
+    <!-- Conteúdo principal -->
     <main>
-        <!-- Espaço reservado para conteúdo futuro -->
-    </main>
+       <div style="max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #00A1E4 0%, #FFFFFF 50%, #00A859 100%);
+        font-family: Arial, 
+        sans-serif; 
+        line-height: 1.6;">
+    <h2>Mato Grosso</h2>
+    <p>
+      Mato Grosso é um dos 27 estados do Brasil, localizado na Região Centro-Oeste. É o terceiro maior em área do país e tem 142 municípios. Sua capital é Cuiabá.
+    </p>
+    <p>
+      Com mais de 3,6 milhões de habitantes, é o segundo estado mais populoso da região. Possui grande destaque no agronegócio e abriga o Pantanal.
+    </p>
+    <p>
+      Apesar do forte desempenho econômico, enfrenta desafios ambientais e sociais, como desmatamento e taxas elevadas de mortalidade infantil e homicídios.
+    </p>
+
+  </div>
+
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 200px;">
+        <img src="https://raw.githubusercontent.com/rafaellsimoes/Mato_Grosso/main/img/img1.jpg" 
+             alt="BR 163 - Nova Mutum" style="width: 100%; border-radius: 8px;">
+        <div style="margin-top: 8px;">Trecho da BR 163 - Nova Mutum - SECOM/MT</div>
+    </div>
+    
+    <div style="flex: 1; min-width: 200px;">
+        <img src="https://raw.githubusercontent.com/rafaellsimoes/Mato_Grosso/main/img/img2.jpg" 
+             alt="Cachoeira - Aripuanã" style="width: 100%; border-radius: 8px;">
+        <div style="margin-top: 8px;">Cachoeira em Aripuanã - SECOM/MT</div>
+    </div>
+    
+    <div style="flex: 1; min-width: 200px;">
+        <img src="https://raw.githubusercontent.com/rafaellsimoes/Mato_Grosso/main/img/img3.jpg" 
+             alt="Algodão - Campo Verde" style="width: 100%; border-radius: 8px;">
+        <div style="margin-top: 8px;">Colheita de algodão em Campo Verde - SECOM/MT</div>
+    </div>
+</div>
+
+</main>
 
     <!-- Rodapé da página -->
     <footer>
